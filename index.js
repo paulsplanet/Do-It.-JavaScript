@@ -3,3 +3,4 @@ function helloWorld() {
 }
 
 helloWorld()
+var a 
