@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var currentSales = prompt("What is current sales volume?", "");
+        var sales1 = 1200;
+        var sales2 = 1300;
+        var sales3 = 1000;
+        var average = (sales1 + sales2 + sales3 + Number(currentSales))/4;
+        var result = currentSales>=average ? "Sales volume is over the average." : "Sales volume is under average.";
+        document.write(result, "<br>");
+        document.write(currentSales, "<br>");
+        document.write(average);
+    </script>
+</body>
+</html>
