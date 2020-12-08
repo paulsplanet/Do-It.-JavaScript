@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var id = "easy1004";
+        var pw = "112233";
+
+        var user_id = prompt("Type your ID.", "");
+        
+        if(id == user_id) {
+            var user_pw = prompt("Type your password.", "");
+            if(pw == user_pw) {
+             document.write("Welcome, " + user_id);
+             } else {
+                 alert("Password is incorrect.")
+                 location.reload()
+             }
+            } else { 
+            alert("ID is incorrect.")
+            location.reload();
+        }
+    </script>
+</body>
+</html>
