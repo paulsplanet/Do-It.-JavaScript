@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var site = prompt("Which site is your favorite search engine among Google, Yahoo, and Naver?", "");
+        var url;
+
+        switch(site) {
+            case "Google": url = "www.google.com";
+            break;
+            case "Yahoo": url = "www.yahoo.com";
+            break;
+            case "Naver": url = "www.naver.com";
+            break;
+            default: alert("That is not one of the option.")
+            location.reload();
+        }
+
+        if(url) location.href = "http://" + url;
+    </script>
+</body>
+</html>
