@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var tv = new Object();
+        tv.color = "black";
+        tv.price = 750;
+        tv.info = function(){
+            document.write("TV color: " + this.color + "<br>");
+            document.write("TV price: " + tv.price, "<br>");
+        }
+
+        var car = {
+            color: "grey",
+            price: 28000,
+            info: function(){
+                document.write("Car color: " + car.color, "<br>");
+                document.write("Car price: " + this.price, "<br>");
+            }
+        }
+        document.write("<h1>Call tv Object method</h1>");
+        tv.info();
+        document.write("<h1>Call car Object method</h1>");
+        car.info();
+        
+    </script>
+</body>
+</html>
