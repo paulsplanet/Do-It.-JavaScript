@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function CheckWeight(name, height, weight){
+            this.userName = name;
+            this.userHeight = height;
+            this.userWeight = weight;
+            this.minWeight;
+            this.maxWeight;
+
+            this.getInfo = function(){
+                var str = "";
+                str += "Name: " + this.userName + "<br>";
+                str += "Height: " + this.userHeight + "<br>";
+                str += "Weight: " + this.userWeight + "<br>";
+                return str;
+            }
+
+            this.getResult = function(){
+                this.minWeight = (this.userHeight - 100)*0.9 - 5;
+                this.maxWeight = (this.userHeight - 100)*0.9 + 5;
+
+                if(this.userWeight >= this.minWeight && this.userWeight <= this.maxWeight){
+                    return "You are in good shape!"+ "<br>";
+                } else if(this.userWeight <= this.minWeight){
+                    return "You better to get more weight!"+ "<br>";
+                } else {
+                    return ("You better to loose wight for your health!" + "<br>")
+                }
+            }
+
+        }
+        
+        var jang = new CheckWeight("jang", 168, 62);
+        var park = new CheckWeight("park", 180, 88);
+        console.log(jang);
+        console.log(park);
+
+        document.write(jang.getInfo());
+        document.write(jang.getResult());
+
+        document.write(park.getInfo());
+        document.write(park.getResult());
+
+
+    </script>
+</body>
+</html>
