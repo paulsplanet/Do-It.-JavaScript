@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var lowerCase = [];
+        var newStr = [];
+        function titleCase(str) {
+   lowerCase = str.toLowerCase().split(" ");
+   
+  var result = [];
+  for (var i = 0; i < lowerCase.length; i++){
+    newStr = lowerCase[i][0].toUpperCase();
+    result[i] = lowerCase[i].replace(lowerCase[i][0], newStr);
+    
+  }
+  return result.join(" ");
+}
+
+
+document.write(titleCase("sHoRt AnD sToUt") + "<br>");
+document.write(lowerCase + "<br>");
+document.write(newStr);
+    </script>
+</body>
+</html>
