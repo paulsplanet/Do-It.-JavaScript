@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+               
+        function whatIsInAName(collection, source){
+            var arr = [];
+            var srcKeys = Object.keys(source);
+            
+
+            for (var i = 0; i < collection.length; i++){
+                var count = 0;
+                for (var j =0; j < srcKeys.length; j++){
+                    
+                    if (collection[i].hasOwnProperty(srcKeys[j]) && collection[i].srcKeys[j] === source.srcKeys[j] ){
+                        count ++;
+                    }
+                    if ( count == srcKeys.length){
+                   arr.push(collection[i]);
+                }
+                    }
+                    
+               
+            }
+            return arr;
+            document.write(arr);
+            console.log(arr);
+        }
+
+        
+        whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+
+        arrA = [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }]
+        document.write(arrA[0]);
+        console.log(arrA[1].first);
+    </script>
+</body>
+</html>
