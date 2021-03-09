@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function dropElements(arr, func) {
+          let lengthArr = arr.length;
+          for (var n = 0; n < lengthArr; n++){
+            if ( func(arr[0])){
+              break;
+            } else {
+              arr.shift();  
+            }  
+        }
+         return arr;  
+        }
+        
+        dropElements([1, 2, 3, 7, 4], function(n) {return n > 3; });
+
+    </script>
+</body>
+</html>
