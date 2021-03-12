@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Person = function(firstAndLast) {
+  // Only change code below this line
+  // Complete the method below and implement the others similarly
+  var fullName = firstAndLast;
+  this.getFirstName = function(){
+    return fullName.split(" ")[0];
+  };
+  this.getLastName = function(){
+    return fullName.split(" ")[1];
+  };
+  this.getFullName = function() {
+    return fullName;
+  };
+  this.setFirstName = function(name){
+    fullName = name + " " + fullName.split(" ")[1];
+  };
+  this.setLastName = function(name){
+    fullName = fullName.split(" ")[0] + " " + name;
+  };
+  this.setFullName = function(name){
+    fullName = name;
+  }
+  
+};
+
+var bob = new Person('Bob Ross');
+bob.getFullName();
+    </script>
+</body>
+</html>
